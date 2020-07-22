@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM python:3.7-alpine
 
 # Add project source
 WORKDIR /usr/src/musicbot
@@ -9,28 +9,23 @@ RUN apk update \
 && apk add --no-cache \
   ca-certificates \
   ffmpeg \
-  opus \
-  python3 \
+  opus-dev \
+  libffi-dev \
   libsodium-dev \
 \
 # Install build dependencies
 && apk add --no-cache --virtual .build-deps \
+  build-base \
   gcc \
   git \
-  libffi-dev \
   make \
   musl-dev \
-  python3-dev \
 \
 # Install pip dependencies
-&& pip3 install --no-cache-dir -r requirements.txt \
-&& pip3 install --upgrade --force-reinstall --version websockets==4.0.1 \
+&& pip3 install --no-cache-dir -U -r requirements.txt \
 \
 # Clean up build dependencies
 && apk del .build-deps
-
-# Create volume for mapping the config
-VOLUME /usr/src/musicbot/config
 
 ENV APP_ENV=docker
 
