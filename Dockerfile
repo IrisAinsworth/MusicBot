@@ -29,4 +29,4 @@ RUN apk update \
 
 ENV APP_ENV=docker
 
-ENTRYPOINT ["python3", "dockerentry.py"]
+ENTRYPOINT ["/bin/sh", "docker-entrypoint.sh"]
