@@ -38,6 +38,7 @@
     "cmd-play-song-reply": "`%s` をキューに追加しました。キューの位置: %s",
     "cmd-play-next": "次に再生！",
     "cmd-play-eta": " - 再生まで: %s",
+    "cmd-play-eta-error": " - cannot estimate time until playing",
     "cmd-play-badextractor": "このサービスから曲を再生する権限がありません",
     "cmd-stream-limit": "あなたのキュー数が上限に達しました ({0})",
     "cmd-stream-success": "ストリーム再生中",
@@ -47,9 +48,17 @@
     "cmd-search-searchlimit": "%s 本より多くの動画を検索することはできません",
     "cmd-search-searching": "動画を検索しています...",
     "cmd-search-none": "動画が見つかりませんでした",
+    "cmd-search-header": "{0} 件の検索結果: \n\n",
     "cmd-search-result": "結果 {0}/{1}: {2}",
+    "cmd-search-list-entry": "**{0}**. **{1}** | {2}",
+    "cmd-search-result-list-noembed": "{0}",
     "cmd-search-accept": "了解、再生します！",
+    "cmd-search-accept-list-embed": "[{0}]({1}) をキューに追加しました。",
+    "cmd-search-accept-list-noembed": "{0} をキューに追加しました。",
     "cmd-search-decline": "はーい :(",
+    "cmd-search-title": "{0} 件の検索結果:",
+    "cmd-search-field-name": "曲を選択",
+    "cmd-search-invalid-option": "Your choice is not in the list. Please choose an option listed above",
     "cmd-np-action-streaming": "ストリーム再生中",
     "cmd-np-action-playing": "再生中",
     "cmd-np-reply-author": "{action}: **{title}** - **{author}** が追加\n再生位置: {progress_bar} {progress}\n:point_right: <{url}>",
@@ -103,4 +112,5 @@
     "playlists-big": "プレイリストの曲数が多すぎます ({0} > {1})",
     "playlists-limit": "プレイリストの曲数 と あなたが既にキューに追加した曲数の合計が上限を超えています ({0} + {1} > {2})",
     "karaoke-enabled": "カラオケモードが有効です。無効にしてからお試しください！"
+    "left-no-owner-guilds": "Left `{}` due to bot owner not being found in it."
 }
